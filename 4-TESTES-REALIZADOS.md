@@ -28,3 +28,9 @@ Cada item abaixo foi executado de verdade; resultado entre parênteses.
 - Você enviou **um único HTML** (não um ZIP): ele já é autocontido (imagens embutidas em base64, sem arquivos externos nem CDN), então não há dependências externas a cachear.
 - Nenhum erro de console no original.
 - O jogo usa o áudio via AudioContext: no celular o som só começa depois do primeiro toque (regra do navegador).
+
+## Correção da abertura (texto sumido / tela preta) — versão v2
+- Problema: o jogo original já tinha regras de CSS (`h1,p{display:none!important}` nos modos paisagem e PC) que escondiam os parágrafos do texto de abertura. Verificado no arquivo original: o texto não aparece nem lá (desktop e celular em paisagem).
+- Correção: uma linha de CSS no `<head>` (`#intro .tx p{display:block!important}`) que só reexibe o texto da abertura.
+- Resultado verificado: o texto rolante aparece no desktop e no celular simulado em paisagem; os 26 testes do PWA continuam passando.
+- Não testei a abertura até o fim nem o resto do jogo depois dela.

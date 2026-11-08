@@ -87,6 +87,8 @@ html.rot button{width:58px;height:58px;opacity:.78}
 html.rot button.f{width:72px;height:72px}
 html.rot button.s{width:52px;height:52px}
 </style>
+<!-- CORREÇÃO: as regras "h1,p{display:none}" do modo paisagem/PC escondiam os parágrafos do texto de abertura (tela preta). Só reexibe o texto da abertura. -->
+<style>#intro .tx p{display:block!important}</style>
 <!-- PWA -->
 <link rel="manifest" href="manifest.json">
 <link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png">
